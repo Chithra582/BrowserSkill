@@ -1,0 +1,23 @@
+name: "browser-tab-controller"
+description: "Opens, navigates, focuses, borrows, and closes browser tabs and dedicated Agent Windows."
+input_schema:
+  type: object
+  properties:
+    action:
+      type: string
+      enum:
+        - "open_window"
+        - "new_tab"
+        - "navigate"
+        - "borrow_tab"
+        - "return_tab"
+        - "close_tab"
+      description: "Tab or window control operation."
+    url:
+      type: string
+      description: "Destination URL to navigate to."
+    tab_id:
+      type: integer
+      description: "Identifier of target browser tab."
+  required:
+    - action

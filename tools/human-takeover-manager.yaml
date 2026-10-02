@@ -1,0 +1,21 @@
+name: "human-takeover-manager"
+description: "Requests temporary human takeover for login/2FA verification and monitors handoff resumption."
+input_schema:
+  type: object
+  properties:
+    action:
+      type: string
+      enum:
+        - "request_takeover"
+        - "poll_status"
+        - "resume_agent"
+      description: "Takeover governance operation."
+    reason:
+      type: string
+      description: "Explanation for why human intervention is required (e.g., CAPTCHA detected, 2FA code needed)."
+    timeout_seconds:
+      type: integer
+      description: "Maximum waiting duration for human takeover."
+      default: 300
+  required:
+    - action

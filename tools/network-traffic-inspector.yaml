@@ -1,0 +1,22 @@
+name: "network-traffic-inspector"
+description: "Intercepts, records, and replays HTTP network requests, headers, response payloads, and console logs."
+input_schema:
+  type: object
+  properties:
+    action:
+      type: string
+      enum:
+        - "start_capture"
+        - "get_traffic"
+        - "get_console_errors"
+        - "replay_request"
+        - "stop_capture"
+      description: "Network inspection command."
+    filter_url_pattern:
+      type: string
+      description: "Optional URL substring or regex pattern to filter captured requests."
+    tab_id:
+      type: integer
+      description: "Identifier of target browser tab."
+  required:
+    - action

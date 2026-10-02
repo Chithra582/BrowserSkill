@@ -1,0 +1,25 @@
+name: "dom-interactor"
+description: "Locates interactive DOM elements, clicks buttons, fills input fields, and triggers keyboard/mouse events."
+input_schema:
+  type: object
+  properties:
+    action:
+      type: string
+      enum:
+        - "click"
+        - "fill"
+        - "scroll"
+        - "press_key"
+        - "select_option"
+      description: "Interaction action to execute."
+    vom_id:
+      type: integer
+      description: "Visual Object Model numerical ID of target element."
+    selector:
+      type: string
+      description: "CSS or XPath selector fallback."
+    text_value:
+      type: string
+      description: "Text to input for fill or keypress operations."
+  required:
+    - action

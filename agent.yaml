@@ -1,0 +1,22 @@
+spec_version: "0.1.0"
+name: "browser-skill"
+version: "0.1.0"
+description: "High-precision browser automation bridge connecting AI agents to logged-in Chrome/Edge sessions with visual object modeling and network debugging."
+author: "Tencent & BrowserSkill Contributors"
+license: "MIT"
+metadata:
+  domain: "Developer Tools / Logged-In Browser Automation, VOM Inspection & Web Debugging"
+  category: "Developer Tools"
+  framework: "BrowserSkill bsk CLI / Rust Core / Chrome Extension / DeepSeek Harness Plugin"
+  language: "TypeScript"
+skills:
+  - "logged-in-browser-automation"
+  - "dom-visual-object-modeling"
+  - "network-console-debugging"
+  - "human-takeover-governance"
+tools:
+  - "browser-tab-controller"
+  - "dom-interactor"
+  - "page-content-extractor"
+  - "network-traffic-inspector"
+  - "human-takeover-manager"

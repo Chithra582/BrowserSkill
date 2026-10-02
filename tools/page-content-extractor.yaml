@@ -1,0 +1,22 @@
+name: "page-content-extractor"
+description: "Extracts page text, structured tables, visual object models (VOM), and full-page screenshots."
+input_schema:
+  type: object
+  properties:
+    extract_mode:
+      type: string
+      enum:
+        - "vom"
+        - "text"
+        - "screenshot"
+        - "full_page_screenshot"
+      description: "Format of content extraction."
+    tab_id:
+      type: integer
+      description: "Identifier of target browser tab."
+    include_bounding_boxes:
+      type: boolean
+      description: "Whether to overlay element bounding boxes on screenshots."
+      default: false
+  required:
+    - extract_mode
